@@ -1,11 +1,12 @@
 "use strict";
 
-function Grid (options) {
+function Grid(options) {
     this.options = options;
     this.board = [];
 
     this.createElement();
     this.createRows();
+    // this.findCell();
 }
 
 Grid.prototype = {
@@ -18,7 +19,7 @@ Grid.prototype = {
     },
 
     createRows: function () {
-        for(let rowIndex = 0; rowIndex < this.options.rows; rowIndex++) {
+        for (let rowIndex = 0; rowIndex < this.options.rows; rowIndex++) {
             const rowDiv = document.createElement("div");
             rowDiv.className = "row";
             rowDiv.style.height = this.options.cell.height;
@@ -47,6 +48,12 @@ Grid.prototype = {
             const cell = new Cell(rowIndex, colIndex, options);
             this.board[rowIndex].push(cell);
         }
+    },
+
+    findCell: function (rowIndex, colIndex) {
+
+        return this.board[rowIndex][colIndex];
+
     },
 
 }

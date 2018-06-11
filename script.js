@@ -14,46 +14,17 @@ const grid = new Grid({
     }
 });
 
+const grid2 = new Grid({
+    rows: 100,
+    columns: 100,
+    parentElement: document.querySelector("main"),
 
-
-
-
-
-
-
-// "use strict";
-// const container = document.querySelector("main");
-
-// function Grid (rows, columns, parentElement) {
-//     this.rows = rows;
-//     this.columns = columns;
-//     this.element = document.createElement("div");
-//     this.element.classList.add(poo);
-//     this.parentElement = parentElement
-//     this.parentElement.appendChild(this.element);
-//     for (let rowIndex = 0; rowIndex < this.rows; rowIndex++){
-//         let cell = new Cell()
-//     }
-// }
-// // Grid.prototype = {
-// //     addElement: function (parentElement) {
-// //         this.element = document.createElement("div");
-// //         this.element.classList.add();
-// //         this.parentElement = parentElement
-// //         this.parentElement.appendChild(this.element);
-// //     },
-    
-// //     constructor: Grid,
-// // }
-
-
-// function Cell (height, width, color, border, parentElement){
-//     this.height = height;
-//     this.width = width;
-//     Grid.bind(this, rows, columns, parentElement);
-//     // this.element = document.createElement("div");
-//     // this.element.classList.add();
-//     // this.parentElement = parentElement
-//     // this.parentElement.appendChild(this.element);
-// }
+    cell: {
+        width: "6px",
+        height: "6px",
+        border: "2px solid white",
+        color: "black",
+        classList: ["cell"],
+    }
+});
 
