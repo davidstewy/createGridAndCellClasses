@@ -6,7 +6,7 @@ function Grid(options) {
 
     this.createElement();
     this.createRows();
-    // this.findCell();
+    
 }
 
 Grid.prototype = {
@@ -14,6 +14,7 @@ Grid.prototype = {
 
     createElement: function () {
         this.element = document.createElement("div");
+        this.element.addEventListener('click', this);
         this.element.classList.add("grid");
         this.options.parentElement.appendChild(this.element);
     },
@@ -51,9 +52,13 @@ Grid.prototype = {
     },
 
     findCell: function (rowIndex, colIndex) {
-
+        
         return this.board[rowIndex][colIndex];
 
     },
 
+    handleEvent: function(event){
+        
+        console.log(event.target.cellInstance);
+    }
 }
